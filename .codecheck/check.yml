@@ -1,0 +1,13 @@
+version: 2.0
+
+steps:
+  pre_codecheck:
+    - checkout
+
+tool_params:
+  secsolar:
+    source_dir: api,config,customize-utils,extensions,admin
+
+params:
+  - name: exclude
+    value: (sources|source-tpl|models|services)

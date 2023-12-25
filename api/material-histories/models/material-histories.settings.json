@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "material_histories",
+  "info": {
+    "name": "material-histories",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "npm_name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "required": true
+    },
+    "framework": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "material": {
+      "type": "integer",
+      "required": true
+    },
+    "content": {
+      "type": "json"
+    },
+    "createdBy": {
+      "type": "integer",
+      "private": true
+    },
+    "updatedBy": {
+      "type": "integer",
+      "private": true
+    },
+    "assets_url": {
+      "type": "json"
+    },
+    "components": {
+      "via": "mh",
+      "collection": "user-components",
+      "dominant": true
+    },
+    "blocks": {
+      "via": "material_histories",
+      "collection": "block-history",
+      "dominant": true
+    },
+    "runtime_blocks": {
+      "collection": "block",
+      "via": "material_histories",
+      "dominant": true
+    }
+  }
+}

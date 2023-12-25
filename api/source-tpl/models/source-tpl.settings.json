@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "source_tpls",
+  "info": {
+    "name": "source_tpl",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    },
+    "data": {
+      "type": "json"
+    },
+    "platform": {
+      "type": "string"
+    },
+    "apps": {
+      "via": "source_tpls",
+      "collection": "apps",
+      "dominant": true
+    }
+  }
+}

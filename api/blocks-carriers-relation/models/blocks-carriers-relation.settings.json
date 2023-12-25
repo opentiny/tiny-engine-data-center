@@ -1,0 +1,32 @@
+{
+  "collectionName": "blocks_carriers_relations",
+  "info": {
+    "name": "blocks-carriers-relation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "block": {
+      "type": "integer",
+      "required": true
+    },
+    "host": {
+      "type": "integer",
+      "required": true
+    },
+    "host_type": {
+      "type": "string",
+      "required": true,
+      "default": "blockGroup"
+    },
+    "version": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

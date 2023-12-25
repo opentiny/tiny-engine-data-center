@@ -1,0 +1,100 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/apps",
+      "handler": "apps.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/apps/schema/:id",
+      "handler": "apps.schema",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/apps/list/:pid",
+      "handler": "apps.list",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/apps/count",
+      "handler": "apps.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/apps/:id",
+      "handler": "apps.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/apps",
+      "handler": "apps.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/apps/:id",
+      "handler": "apps.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/apps/:id",
+      "handler": "apps.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/apps/batch/:pid",
+      "handler": "apps.deleteByPlatformId",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/apps/i18n/:id",
+      "handler": "apps.updateI18n",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/apps/associate/blocks",
+      "handler": "apps.associateBlocksInApps",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/apps/dataHandler/data/sync",
+      "handler": "apps.syncDataHandler",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

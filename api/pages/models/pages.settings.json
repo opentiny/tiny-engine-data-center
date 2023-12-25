@@ -1,0 +1,76 @@
+{
+  "collectionName": "pages",
+  "info": {
+    "name": "pages",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "app": {
+      "type": "biginteger",
+      "required": true
+    },
+    "route": {
+      "type": "string",
+      "required": true
+    },
+    "page_content": {
+      "type": "json",
+      "default": ""
+    },
+    "is_body": {
+      "type": "boolean",
+      "default": true
+    },
+    "parent_id": {
+      "type": "biginteger",
+      "default": 0,
+      "required": true
+    },
+    "group": {
+      "type": "string",
+      "default": "staticPages"
+    },
+    "depth": {
+      "type": "integer",
+      "default": 0
+    },
+    "is_page": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "is_default": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "createdBy": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "updatedBy": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "private": true
+    },
+    "tenant": {
+      "type": "integer"
+    },
+    "occupier": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "content_blocks": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "kind": "collectionType",
+  "collectionName": "materials",
+  "info": {
+    "name": "materials",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "npm_name": {
+      "type": "string"
+    },
+    "name_cn": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "framework": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "assets_url": {
+      "type": "json"
+    },
+    "version": {
+      "type": "string"
+    },
+    "published": {
+      "type": "boolean",
+      "default": false
+    },
+    "createdBy": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "updatedBy": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "private": true
+    },
+    "last_build_info": {
+      "type": "json"
+    },
+    "user_components": {
+      "type": "string"
+    },
+    "latest": {
+      "model": "material-histories"
+    },
+    "user_blocks": {
+      "via": "materials",
+      "collection": "block-history",
+      "dominant": true
+    },
+    "material_histories": {
+      "type": "string"
+    },
+    "isOfficial": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "public": {
+      "type": "integer",
+      "default": 1,
+      "required": false
+    },
+    "public_scope_tenants": {
+      "collection": "tenant",
+      "via": "materials",
+      "dominant": true
+    },
+    "isDefault": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "tiny_reserved": {
+      "type": "boolean",
+      "default": false
+    },
+    "material_category_relations": {
+      "collection": "material-category-relation",
+      "via": "material"
+    },
+    "component_library": {
+      "type": "string"
+    }
+  }
+}

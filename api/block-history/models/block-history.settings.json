@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "block_histories",
+  "info": {
+    "name": "block_history",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "version": {
+      "type": "string",
+      "default": null
+    },
+    "npm_name": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "content": {
+      "type": "json"
+    },
+    "assets": {
+      "type": "json"
+    },
+    "screenshot": {
+      "type": "text"
+    },
+    "build_info": {
+      "type": "json"
+    },
+    "materials": {
+      "collection": "materials",
+      "via": "user_blocks"
+    },
+    "material_histories": {
+      "collection": "material-histories",
+      "via": "blocks"
+    },
+    "path": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "mode": {
+      "type": "enumeration",
+      "enum": ["vscode"]
+    },
+    "block_id": {
+      "type": "integer"
+    },
+    "i18n": {
+      "type": "json"
+    },
+    "created_app": {
+      "type": "integer"
+    },
+    "content_blocks": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "task_record",
+  "info": {
+    "name": "tasks",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "teamId": {
+      "default": 0,
+      "type": "integer"
+    },
+    "taskTypeId": {
+      "type": "integer",
+      "default": 0
+    },
+    "uniqueId": {
+      "type": "integer",
+      "required": true
+    },
+    "taskName": {
+      "type": "string",
+      "required": false
+    },
+    "taskStatus": {
+      "type": "integer",
+      "default": 0
+    },
+    "taskResult": {
+      "type": "text"
+    },
+    "progress": {
+      "type": "string"
+    },
+    "createdBy": {
+      "type": "integer",
+      "private": true
+    },
+    "updatedBy": {
+      "type": "integer",
+      "private": true
+    },
+    "progress_percent": {
+      "type": "integer",
+      "default": 0
+    },
+    "indicator": {
+      "type": "json"
+    }
+  }
+}

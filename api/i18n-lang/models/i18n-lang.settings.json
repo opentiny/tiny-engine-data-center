@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "i18n_langs",
+  "info": {
+    "name": "i18n-lang",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "lang": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "i18n_entries": {
+      "collection": "i18n-entries",
+      "via": "lang"
+    },
+    "apps": {
+      "via": "i18n_langs",
+      "collection": "apps",
+      "dominant": true
+    },
+    "blocks": {
+      "collection": "block",
+      "via": "i18n_langs",
+      "dominant": true
+    }
+  }
+}

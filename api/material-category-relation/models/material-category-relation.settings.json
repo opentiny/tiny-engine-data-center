@@ -1,0 +1,34 @@
+{
+  "collectionName": "material_category_relations",
+  "info": {
+    "name": "material-category-relation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "material": {
+      "model": "materials"
+    },
+    "category_code": {
+      "type": "string",
+      "required": true
+    },
+    "category_name": {
+      "type": "string",
+      "required": true
+    },
+    "relation_type": {
+      "type": "enumeration",
+      "enum": ["material"],
+      "required": true
+    }
+  }
+}

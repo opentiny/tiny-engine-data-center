@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/block-histories",
+      "handler": "block-history.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/block-histories/count",
+      "handler": "block-history.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/block-histories/:id",
+      "handler": "block-history.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/block-histories",
+      "handler": "block-history.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/block-histories/:id",
+      "handler": "block-history.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/block-histories/:id",
+      "handler": "block-history.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

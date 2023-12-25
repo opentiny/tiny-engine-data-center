@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/i18n-langs",
+      "handler": "i18n-lang.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/i18n-langs/count",
+      "handler": "i18n-lang.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/i18n-langs/:id",
+      "handler": "i18n-lang.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/i18n-langs",
+      "handler": "i18n-lang.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/i18n-langs/:id",
+      "handler": "i18n-lang.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/i18n-langs/:id",
+      "handler": "i18n-lang.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

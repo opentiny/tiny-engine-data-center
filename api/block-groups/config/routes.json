@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/block-groups",
+      "handler": "block-groups.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/block-groups/tiny",
+      "handler": "block-groups.tinyFind",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/block-groups/count",
+      "handler": "block-groups.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/block-groups/:id",
+      "handler": "block-groups.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/block-groups",
+      "handler": "block-groups.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/block-groups/:id",
+      "handler": "block-groups.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/block-groups/:id",
+      "handler": "block-groups.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

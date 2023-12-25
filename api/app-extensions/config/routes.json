@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/app-extensions",
+      "handler": "app-extensions.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/app-extensions/count",
+      "handler": "app-extensions.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/app-extensions/:id",
+      "handler": "app-extensions.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/app-extensions",
+      "handler": "app-extensions.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/app-extensions/:id",
+      "handler": "app-extensions.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/app-extensions/:id",
+      "handler": "app-extensions.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/app-extensions/bulk",
+      "handler": "app-extensions.bulkDeleteExtension",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/app-extensions/uk/update",
+      "handler": "app-extensions.updateByUK",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

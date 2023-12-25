@@ -1,0 +1,34 @@
+{
+  "collectionName": "app_extensions",
+  "info": {
+    "name": "app_extensions",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "json",
+      "required": true
+    },
+    "app": {
+      "type": "integer",
+      "required": true
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

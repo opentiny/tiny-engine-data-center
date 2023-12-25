@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/material-histories",
+      "handler": "material-histories.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/material-histories/simple",
+      "handler": "material-histories.findSimple",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/material-histories/count",
+      "handler": "material-histories.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/material-histories/associated",
+      "handler": "material-histories.associated",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/material-histories/:id",
+      "handler": "material-histories.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/material-histories",
+      "handler": "material-histories.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/material-histories/:id",
+      "handler": "material-histories.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/material-histories/batchDelete",
+      "handler": "material-histories.batchDelete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/material-histories/:id",
+      "handler": "material-histories.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

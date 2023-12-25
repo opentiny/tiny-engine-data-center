@@ -1,0 +1,119 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_components",
+  "info": {
+    "name": "user-components",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "version": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "json",
+      "required": true
+    },
+    "component": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "doc_url": {
+      "type": "string"
+    },
+    "screenshot": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "string"
+    },
+    "dev_mode": {
+      "type": "string",
+      "required": true
+    },
+    "npm": {
+      "type": "json",
+      "required": true
+    },
+    "group": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "snippets": {
+      "type": "json"
+    },
+    "schema_fragment": {
+      "type": "json"
+    },
+    "configure": {
+      "type": "json"
+    },
+    "createdBy": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "updatedBy": {
+      "private": true,
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "mh": {
+      "private": true,
+      "collection": "material-histories",
+      "via": "components"
+    },
+    "public": {
+      "type": "integer",
+      "default": 1,
+      "required": false
+    },
+    "public_scope_tenants": {
+      "collection": "tenant",
+      "via": "user_components",
+      "dominant": true
+    },
+    "framework": {
+      "type": "string",
+      "default": "Vue",
+      "required": true
+    },
+    "isOfficial": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "isDefault": {
+      "type": "boolean",
+      "default": false
+    },
+    "tiny_reserved": {
+      "type": "boolean",
+      "default": false
+    },
+    "component_metadata": {
+      "type": "json"
+    },
+    "library": {
+      "type": "integer"
+    }
+  }
+}

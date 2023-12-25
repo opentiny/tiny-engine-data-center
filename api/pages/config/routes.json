@@ -1,0 +1,92 @@
+{
+  "routes": [
+    {
+      "method": "PUT",
+      "path": "/pages/lock/:id",
+      "handler": "pages.updateOccupier",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pages",
+      "handler": "pages.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pages/list/:aid",
+      "handler": "pages.list",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pages/count",
+      "handler": "pages.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pages/:id",
+      "handler": "pages.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pages",
+      "handler": "pages.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pages/:id",
+      "handler": "pages.checkUpdate",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pages/:id",
+      "handler": "pages.checkDelete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pages/batch/:pid",
+      "handler": "pages.deleteByProjectId",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pages/raw",
+      "handler": "pages.rawOneSql",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pages/blockhistories/:id",
+      "handler": "pages.findAllBlockHistories",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

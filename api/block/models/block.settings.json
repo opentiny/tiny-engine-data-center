@@ -1,0 +1,116 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blocks",
+  "info": {
+    "name": "Block",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "name_cn": {
+      "type": "string"
+    },
+    "npm_name": {
+      "type": "string"
+    },
+    "framework": {
+      "type": "string"
+    },
+    "content": {
+      "type": "json"
+    },
+    "assets": {
+      "type": "json"
+    },
+    "screenshot": {
+      "type": "text"
+    },
+    "createdBy": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "updatedBy": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "private": true
+    },
+    "last_build_info": {
+      "type": "json"
+    },
+    "histories": {
+      "collection": "block-history"
+    },
+    "groups": {
+      "collection": "block-groups",
+      "via": "blocks"
+    },
+    "categories": {
+      "collection": "block-category",
+      "via": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "tags": {
+      "type": "json"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "current_history": {
+      "model": "block-history"
+    },
+    "i18n_langs": {
+      "collection": "i18n-lang",
+      "via": "blocks"
+    },
+    "material_histories": {
+      "private": true,
+      "collection": "material-histories",
+      "via": "runtime_blocks"
+    },
+    "path": {
+      "type": "string"
+    },
+    "occupier": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "isOfficial": {
+      "type": "boolean",
+      "default": false
+    },
+    "public": {
+      "type": "integer",
+      "default": 1,
+      "required": false
+    },
+    "public_scope_tenants": {
+      "collection": "tenant",
+      "via": "blocks",
+      "dominant": true
+    },
+    "isDefault": {
+      "type": "boolean",
+      "default": false
+    },
+    "tiny_reserved": {
+      "type": "boolean",
+      "default": false
+    },
+    "created_app": {
+      "type": "integer"
+    },
+    "content_blocks": {
+      "type": "json"
+    }
+  }
+}

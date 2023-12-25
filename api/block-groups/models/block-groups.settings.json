@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "block_groups",
+  "info": {
+    "name": "block_groups",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "app": {
+      "via": "block_groups",
+      "model": "apps"
+    },
+    "desc": {
+      "type": "string"
+    },
+    "blocks": {
+      "via": "groups",
+      "collection": "block",
+      "dominant": true
+    }
+  }
+}

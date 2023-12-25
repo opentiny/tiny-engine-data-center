@@ -1,0 +1,48 @@
+{
+  "collectionName": "pages_histories",
+  "info": {
+    "name": "pages-histories",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "message": {
+      "type": "string"
+    },
+    "page": {
+      "type": "biginteger",
+      "required": true
+    },
+    "time": {
+      "type": "datetime"
+    },
+    "page_content": {
+      "type": "json"
+    },
+    "is_body": {
+      "type": "boolean"
+    },
+    "parent_id": {
+      "type": "biginteger"
+    },
+    "route": {
+      "type": "string"
+    },
+    "is_home": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string"
+    },
+    "group": {
+      "type": "string"
+    },
+    "content_blocks": {
+      "type": "json"
+    }
+  }
+}

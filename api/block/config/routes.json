@@ -1,0 +1,156 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/blocks/listNew",
+      "handler": "block.listNew",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blocks/list",
+      "handler": "block.list",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blocks/list2",
+      "handler": "block.pagination",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blocks/users",
+      "handler": "block.users",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/blocks/lock/:id",
+      "handler": "block.updateOccupier",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blocks",
+      "handler": "block.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blocks/tags",
+      "handler": "block.allTags",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blocks/notgroup/:id",
+      "handler": "block.findBlocks",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blocks/notgroup/:id/count",
+      "handler": "block.countNotInGroupBlocks",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blocks/count",
+      "handler": "block.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blocks/:id",
+      "handler": "block.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/blocks",
+      "handler": "block.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/blocks/:id",
+      "handler": "block.checkUpdate",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/blocks/:id",
+      "handler": "block.checkDelete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blocks/:id/materials",
+      "handler": "block.countMaterials",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blocks/i18nlangs/list",
+      "handler": "block.findI18nLangs",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/blocks/i18n/:id",
+      "handler": "block.updateI18n",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blocks/contentblocks/:id",
+      "handler": "block.findAllContentBlocks",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blocks/blockhistories/:id",
+      "handler": "block.findAllBlockHistories",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

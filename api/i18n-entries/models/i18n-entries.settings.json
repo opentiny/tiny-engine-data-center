@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "i18n_entries",
+  "info": {
+    "name": "i18n-entries",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "key": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "host": {
+      "type": "integer",
+      "required": true
+    },
+    "host_type": {
+      "type": "string",
+      "required": true
+    },
+    "lang": {
+      "via": "i18n_entries",
+      "model": "i18n-lang"
+    }
+  }
+}

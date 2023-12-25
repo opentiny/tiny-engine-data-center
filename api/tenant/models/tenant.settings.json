@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tenants",
+  "info": {
+    "name": "tenant"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "tenant_id": {
+      "type": "string"
+    },
+    "name_cn": {
+      "type": "string"
+    },
+    "name_en": {
+      "type": "string"
+    },
+    "createdBy": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "private": true
+    },
+    "updatedBy": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "private": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "blocks": {
+      "via": "public_scope_tenants",
+      "collection": "block"
+    },
+    "materials": {
+      "via": "public_scope_tenants",
+      "collection": "materials"
+    },
+    "user_components": {
+      "via": "public_scope_tenants",
+      "collection": "user-components"
+    }
+  }
+}

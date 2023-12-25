@@ -1,0 +1,154 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apps",
+  "info": {
+    "name": "apps",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "platform": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "app_website": {
+      "type": "string"
+    },
+    "assets_url": {
+      "type": "string"
+    },
+    "obs_url": {
+      "type": "string"
+    },
+    "home_page": {
+      "type": "biginteger"
+    },
+    "state": {
+      "type": "integer"
+    },
+    "published": {
+      "type": "boolean",
+      "default": false
+    },
+    "css": {
+      "type": "text"
+    },
+    "config": {
+      "type": "json"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "git_group": {
+      "type": "string"
+    },
+    "project_name": {
+      "type": "string"
+    },
+    "branch": {
+      "type": "string"
+    },
+    "constants": {
+      "type": "json"
+    },
+    "tenant": {
+      "type": "integer"
+    },
+    "data_handler": {
+      "type": "json"
+    },
+    "data_source_global": {
+      "type": "json"
+    },
+    "block_groups": {
+      "collection": "block-groups",
+      "via": "app"
+    },
+    "block_categories": {
+      "collection": "block-category",
+      "via": "app"
+    },
+    "source_tpls": {
+      "collection": "source-tpl",
+      "via": "apps"
+    },
+    "i18n_langs": {
+      "collection": "i18n-lang",
+      "via": "apps"
+    },
+    "createdBy": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "updatedBy": {
+      "private": true,
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "latest": {
+      "type": "string"
+    },
+    "platform_history": {
+      "type": "string"
+    },
+    "editor_url": {
+      "type": "string"
+    },
+    "visit_url": {
+      "type": "string"
+    },
+    "is_demo": {
+      "type": "boolean"
+    },
+    "is_default": {
+      "type": "boolean"
+    },
+    "set_default_by": {
+      "private": true,
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "framework": {
+      "type": "string"
+    },
+    "template_type": {
+      "type": "string"
+    },
+    "set_template_time": {
+      "type": "datetime"
+    },
+    "set_template_by": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "global_state": {
+      "type": "json"
+    },
+    "default_lang": {
+      "type": "string"
+    },
+    "extend_config": {
+      "type": "json",
+      "default": {}
+    },
+    "data_hash": {
+      "type": "string"
+    },
+    "tpl-groups": {
+      "type": "string"
+    },
+    "can_associate": {
+      "type": "boolean"
+    }
+  }
+}

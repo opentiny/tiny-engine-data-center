@@ -1,0 +1,84 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/i18n-entries",
+      "handler": "i18n-entries.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/i18n-entries/count",
+      "handler": "i18n-entries.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/i18n-entries/:id",
+      "handler": "i18n-entries.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/i18n-entries",
+      "handler": "i18n-entries.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/i18n-entries/bulk/create",
+      "handler": "i18n-entries.bulkCreateEntries",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/i18n-entries/bulk/insertOrUpdate",
+      "handler": "i18n-entries.bulkInsertOrUpdate",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/i18n-entries/:id",
+      "handler": "i18n-entries.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/i18n-entries/:id",
+      "handler": "i18n-entries.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/i18n-entries/bulk/delete",
+      "handler": "i18n-entries.bulkDeleteEntries",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/i18n-entries",
+      "handler": "i18n-entries.bulkUpdateEntries",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
