@@ -17,14 +17,14 @@ module.exports = ({ env }) => ({
       connector: "bookshelf",
       settings: {
         client: "mysql",
-        host: env("DB_IP", "localhost"), // 数据库ip
+        host: env("DB_IP", process.env.MYSQL_HOST), // 数据库ip
         port: env.int("DB_PORT", process.env.MYSQL_PORT || 3306), // 数据库端口
         database: env(
           "DB_NAME",
-          process.env.MYSQL_DBNAME || "tiny_engine-data"
+          process.env.MYSQL_DBNAME || "tinyengine_data_center"
         ), // 数据库name
         username: env("DB_USER", "root"), // 数据库用户账号
-        password: env("DB_PASSWORD", "111111"), // 数据库密码
+        password: env("DB_PASSWORD", process.env.MYSQL_PASSWORD), // 数据库密码
         ssl: env.bool("DATABASE_SSL", false), // true 通过证书或令牌链接, false 通过用户账号密码链接
       },
       options: {},
