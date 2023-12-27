@@ -9,7 +9,7 @@
  * A PARTICULAR PURPOSE. SEE THE APPLICABLE LICENSES FOR MORE DETAILS.
  *
  */
- module.exports = ({ env }) => ({
+module.exports = ({ env }) => ({
   defaultConnection: "dbDefault",
   connections: {
     // 数据库配置，需替换自己的服务配置
