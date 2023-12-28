@@ -2,7 +2,14 @@
   "name": "tiny-engine-data-center",
   "private": true,
   "version": "1.0.0",
-  "description": "A Strapi application",
+  "description": "tiny-engine-data-center, also known as the data center, uses the strAPI ORM data management open source framework to provide data services to tiny-engine-webservice by encapsulating the API for basic operations on data tables",
+  "homepage": "https://opentiny.design/tiny-engine",
+  "keywords": [
+    "node.js",
+    "tiny-engine-data-center",
+    "lowcode",
+    "dataService"
+  ],
   "scripts": {
     "dev": "strapi develop",
     "start": "strapi start",
@@ -21,6 +28,16 @@
     "prepare": "husky install",
     "test": "mocha -t 60000 'test/**/*.test.js'"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opentiny/tiny-engine-data-center",
+    "directory": ""
+  },
+  "bugs": {
+    "url": "https://github.com/opentiny/tiny-engine-data-center/issues"
+  },
+  "author": "OpenTiny Team",
+  "license": "MIT",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "@swc-node/jest": "^1.1.0",
@@ -101,10 +118,5 @@
     "property-expr": "2.0.4",
     "ssri": "8.0.1",
     "y18n": "5.0.5"
-  },
-  "author": {
-    "name": "开发者",
-    "email": "developer@lowcode.com"
-  },
-  "license": "MIT"
+  }
 }
