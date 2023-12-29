@@ -3,16 +3,19 @@
     <img alt="OpenTiny Logo" src="logo.svg" height="100" style="max-width:100%;">
   </a>
 </p>
-<p align="center">tiny-engine-data-center, also known as the data center, uses the strAPI ORM data management open source framework to provide data services to tiny-engine-webservice by encapsulating the API for basic operations on data tables</p>
+<p align="center">TinyEngine Data Center, also known as the data center, uses the strAPI ORM data management open source framework to provide data services to TinyEngine Web Service by encapsulating the API for basic operations on data tables</p>
 
 
 English | [简体中文](README.zh-CN.md)
 
 ### Instruction Manual
+
 For specific server usage documentation, please see [TinyEngine Official Website - User Manual](https://opentiny.design/tiny-engine#/help-center/course/backend/51)
 
 ### development
+
 #### Environment variables
+
 |Variable name|Description|
 |---|---|
 |MYSQL_HOST|mysql service ip address|
@@ -28,7 +31,9 @@ If Redis is used, the configuration example is as follows:
 |REDIS_PORT|The redis service port, default 6380|
 |RADIS_PASSWORD|Redis service password|
 |REDIS_DB|The number of the Redis database connection, default 2|
+
 #### Local Runtime Configuration Method:
+
 git-bash or bash
 ```
 vi ~/.bashrc
@@ -45,6 +50,7 @@ source ~/.bashrc
 Make the set environment variables take effect;(The environment variables set in git bash cannot be applied to powershell and cmd)
 Start project
 Go to the root directory of the project and execute it in sequence
+
 ### Milestones
 
 ```mermaid

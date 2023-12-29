@@ -4,15 +4,18 @@
   </a>
 </p>
 
-<p align="center">tiny-engine-data-center，也称为数据中心，使用strAPI ORM数据管理开源框架，通过封装API对数据表进行基本操作，为tiny-engine-webservice提供数据服务</p>
+<p align="center">TinyEngine Data Center，也称为数据中心，使用strAPI ORM数据管理开源框架，通过封装API对数据表进行基本操作，为TinyEngine Web Service提供数据服务</p>
 
 [English](README.md) | 简体中文
 
 ### 使用手册
+
 具体服务端使用文档请查看[TinyEngine 官网-使用手册](https://opentiny.design/tiny-engine#/help-center/course/backend/51)
+
 ### 开发
 
 #### 环境变量
+
 |变量名称|说明
 |---|---|
 |MYSQL_HOST|mysql服务ip地址|
@@ -55,6 +58,7 @@ npm run build
 npm run dev
 ```
 ### 里程碑
+
 ```mermaid
 gantt 
 dateFormat YYYY-MM-DD
