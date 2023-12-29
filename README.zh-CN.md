@@ -14,8 +14,8 @@
 ```
 $ npm install
 ```
-本地开发配置文件修改
-* tiny-engine-data-center根目录config文件夹下database.js中，修改数据库及redis配置为自己服务配置(redis不用可以删除相关配置及代码)
+本地开发配置
+* https://opentiny.design/tiny-engine#/help-center/course/backend/51
 
 启动项目
 ```

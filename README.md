@@ -14,9 +14,8 @@ Dependencies required for installation
 ```
 $ npm install
 ```
-Modifying the Local Development Configuration File
-* In the database.js file in the config folder in the root directory of tiny-engine-data-center, modify the database and Redis configuration to its own service configuration (The related configuration and code can be deleted if the Redis does not need to be used).
-
+Local development configuration
+*https://opentiny.design/tiny-engine#/help -center/course/backend/51
 Start a project
 ```
 $ npm run dev

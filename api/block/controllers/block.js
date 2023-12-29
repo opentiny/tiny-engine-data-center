@@ -192,7 +192,7 @@ module.exports = {
     return sanitizeEntity(blocks, {
       model: strapi.models.block,
       includeFields: ['label', 'screenshot', 'occupier', 'name_cn', 'last_build_info'],
-    }).map((b) => ({ ...b, is_published: Boolean(b.last_build_info?.result) }));
+    }).map((b) => ({ ...b, is_published: Boolean(b.last_build_info?.buildResult) }));
   },
 
   // 区块精简列表
