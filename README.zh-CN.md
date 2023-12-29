@@ -11,17 +11,13 @@
 ### 使用手册
 具体服务端使用文档请查看[TinyEngine 官网-使用手册](https://opentiny.design/tiny-engine#/help-center/course/backend/51)
 ### 开发
-安装所需的依赖
 
-```
-$ npm install
-```
-环境变量
+#### 环境变量
 |变量名称|说明
 |---|---|
 |MYSQL_HOST|mysql服务ip地址|
 |MYSQL_PORT|mysql服务端口，默认 3306|
-|MYSQL_DBNAME|mysql 服务数据库名称|
+|MYSQL_DBNAME|mysql服务数据库名称|
 |MYSQL_PASSWORD|mysql服务密码|
 
 如果使用了redis, 配置示例如下：
@@ -36,14 +32,17 @@ $ npm install
 ## 本地运行时配置方式：
 
 git-bash 或 bash
-`vi ~/.bashrc`
-```sh
+```
+vi ~/.bashrc
+```
+
+```
 export MQ_IP=192.168.0.11
 export MQ_PORT=5671
 # 等等环境变量
 ```
 设置完后，重新打开命令行或则在当前命令行执行
-```sh
+```
 source ~/.bashrc
 ```
 让设置的环境变量生效；(git bash中设置的环境变量无法适用于powershell 和cmd)

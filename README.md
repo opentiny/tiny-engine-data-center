@@ -12,23 +12,27 @@ English | [简体中文](README.zh-CN.md)
 For specific server usage documentation, please see [TinyEngine Official Website - User Manual](https://opentiny.design/tiny-engine#/help-center/course/backend/51)
 
 ### development
-## Environment variables
-|Variable name|Description
+#### Environment variables
+|Variable name|Description|
 |---|---|
 |MYSQL_HOST|mysql service ip address|
 |MYSQL_PORT|The mysql service port, default 3306|
 |MYSQL_DBNAME|mysql service database name|
 |MYSQL_PASSWORD|mysql service password|
+
 If Redis is used, the configuration example is as follows:
-|Variable name|Description
+
+|Variable name|Description|
 |---|---|
-REDIS_HOST|Redis service ip address|
-REDIS_PORT|The redis service port, default 6380|
+|REDIS_HOST|Redis service ip address|
+|REDIS_PORT|The redis service port, default 6380|
 |RADIS_PASSWORD|Redis service password|
 |REDIS_DB|The number of the Redis database connection, default 2|
-## Local Runtime Configuration Method:
+#### Local Runtime Configuration Method:
 git-bash or bash
-`vi ~/.bashrc`
+```
+vi ~/.bashrc
+```
 ```
 export MQ_IP=192.168.0.11
 export MQ_PORT=5671
