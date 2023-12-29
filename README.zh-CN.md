@@ -4,24 +4,61 @@
   </a>
 </p>
 
-<p align="center">TinyEngine低代码引擎使能开发者定制低代码平台，支持在线实时构建低码平台，支持二次开发或集成低码平台能力</p>
+<p align="center">TinyEngine Data Center，也称为数据中心，使用strAPI ORM数据管理开源框架，通过封装API对数据表进行基本操作，为TinyEngine Web Service提供数据服务</p>
 
 [English](README.md) | 简体中文
 
+### 使用手册
+
+具体服务端使用文档请查看[TinyEngine 官网-使用手册](https://opentiny.design/tiny-engine#/help-center/course/backend/51)
+
 ### 开发
-安装所需的依赖
+
+#### 环境变量
+
+|变量名称|说明
+|---|---|
+|MYSQL_HOST|mysql服务ip地址|
+|MYSQL_PORT|mysql服务端口，默认 3306|
+|MYSQL_DBNAME|mysql服务数据库名称|
+|MYSQL_PASSWORD|mysql服务密码|
+
+如果使用了redis, 配置示例如下：
+
+|变量名称|说明
+|---|---|
+|REDIS_HOST|redis服务ip地址|
+|REDIS_PORT|redis服务端口，默认 6380|
+|RADIS_PASSWORD|redis服务密码|
+|REDIS_DB|redis连接的存储区编号， 默认 2|
+
+## 本地运行时配置方式：
+
+git-bash 或 bash
+```
+vi ~/.bashrc
+```
 
 ```
-$ npm install
+export MQ_IP=192.168.0.11
+export MQ_PORT=5671
+# 等等环境变量
 ```
-本地开发配置
-* https://opentiny.design/tiny-engine#/help-center/course/backend/51
-
+设置完后，重新打开命令行或则在当前命令行执行
+```
+source ~/.bashrc
+```
+让设置的环境变量生效；(git bash中设置的环境变量无法适用于powershell 和cmd)
 启动项目
+进入到项目根目录下，依次执行
+
 ```
-$ npm run dev
+yarn install --ignore-engines
+npm run build
+npm run dev
 ```
 ### 里程碑
+
 ```mermaid
 gantt 
 dateFormat YYYY-MM-DD
