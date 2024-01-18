@@ -192,7 +192,7 @@ module.exports = {
     return sanitizeEntity(blocks, {
       model: strapi.models.block,
       includeFields: ['label', 'screenshot', 'occupier', 'name_cn', 'last_build_info'],
-    }).map((b) => ({ ...b, is_published: Boolean(b.last_build_info?.buildResult) }));
+    }).map((b) => ({ ...b, is_published: Boolean(b.last_build_info?.result) }));
   },
 
   // 区块精简列表
@@ -361,7 +361,7 @@ const getNotInGroupBlocks = async (user, query, params) => {
         return false;
       }
       // 公开范围过滤
-      if (item.public === PUBLIC_SCOPE.FULL_PUBLIC) { 
+      if (item.public === PUBLIC_SCOPE.FULL_PUBLIC) {
         return true;
       }
       if (
@@ -380,7 +380,7 @@ const getNotInGroupBlocks = async (user, query, params) => {
       return block;
     });
 
-  if (_limit && _start) { 
+  if (_limit && _start) {
     return filtedEntities.slice(parseInt(_start, 10), parseInt(_start, 10) + parseInt(_limit, 10));
   }
   return filtedEntities;
