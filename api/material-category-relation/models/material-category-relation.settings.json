@@ -17,6 +17,12 @@
     "material": {
       "model": "materials"
     },
+    "materials": {
+      "collection": "materials",
+      "via": "material_category_relations",
+      "collectionName": "materials__material_category_relations",
+      "dominant": true
+    },
     "category_code": {
       "type": "string",
       "required": true

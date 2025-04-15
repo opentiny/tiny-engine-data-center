@@ -23,17 +23,6 @@ const {
 const idRegExp = /^[0-9]+$/; // Tips: 非必要情况下正则不要用g参数；如果必须使用，需要尽量限制使用范围，不要设为全局变量。
 
 module.exports = {
-  async find(ctx) {
-    const { list } = await findAllMaterial(ctx.session.user, ctx.request.query, 'user-components', 'user_components', [
-      'createdBy'
-    ]);
-    return list.map((item) =>
-      sanitizeEntity(
-        { ...item, createdBy: filterUserField(item.createdBy) },
-        { model: strapi.models['user-components'] }
-      )
-    );
-  },
 
   async pagination(ctx) {
     const { list, total } = await findAllMaterial(
@@ -59,33 +48,7 @@ module.exports = {
     const { list } = await findAllMaterial(ctx.session.user, ctx.request.query, 'user-components', 'user_components');
     return list.length;
   },
-
-  async update(ctx) {
-    const { id } = ctx.params;
-    const newData = { ...ctx.request.body };
-
-    let currentPublicScope = newData.public;
-    if (!isTruthy(currentPublicScope)) {
-      currentPublicScope = (await strapi.services['user-components'].findOne({ id })).public;
-    }
-
-    handlePublicScope(currentPublicScope, newData);
-    handleTinyReserved(ctx.session.user, newData);
-
-    const component = await strapi.services['user-components'].update({ id }, newData);
-    return sanitizeEntity(component, { model: strapi.models['user-components'] });
-  },
-
-  async create(ctx) {
-    const data = { ...ctx.request.body };
-
-    handlePublicScope(data.public, data);
-    handleTinyReserved(ctx.session.user, data, true);
-
-    const component = await strapi.services['user-components'].create(data);
-    return sanitizeEntity(component, { model: strapi.models['user-components'] });
-  },
-
+  
   async associated(ctx) {
     const { id } = ctx.params;
     if (!idRegExp.test(id)) {

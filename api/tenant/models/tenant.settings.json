@@ -42,6 +42,10 @@
     "user_components": {
       "via": "public_scope_tenants",
       "collection": "user-components"
+    },
+    "component_library": {
+      "via": "public_scope_tenants",
+      "collection": "component-library"
     }
   }
 }

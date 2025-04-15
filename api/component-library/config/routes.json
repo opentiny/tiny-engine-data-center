@@ -1,0 +1,36 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/component-library",
+      "handler": "component-library.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/component-library",
+      "handler": "component-library.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/component-library/:id",
+      "handler": "component-library.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/component-library/:id",
+      "handler": "component-library.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

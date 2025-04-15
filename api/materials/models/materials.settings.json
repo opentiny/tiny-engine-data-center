@@ -92,10 +92,12 @@
     },
     "material_category_relations": {
       "collection": "material-category-relation",
-      "via": "material"
+      "via": "materials"
     },
     "component_library": {
-      "type": "string"
+      "collection": "component-library",
+      "via": "materials",
+      "dominant": true
     }
   }
 }

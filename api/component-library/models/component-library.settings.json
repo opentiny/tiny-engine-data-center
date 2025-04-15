@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "component_library",
+  "info": {
+    "name": "Component-Library",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": "",
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "packageName": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "framework": {
+      "type": "enumeration",
+      "enum": [
+        "Html",
+        "Angular",
+        "React",
+        "Vue"
+      ],
+      "required": true
+    },
+    "script": {
+      "type": "string"
+    },
+    "css": {
+      "type": "json"
+    },
+    "description": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "string"
+    },
+    "isDefault": {
+      "type": "boolean",
+      "default": false
+    },
+    "isOfficial": {
+      "type": "boolean",
+      "default": false
+    },
+    "public": {
+      "type": "integer",
+      "default": 0,
+      "required": false
+    },
+    "createdBy": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "updatedBy": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "public_scope_tenants": {
+      "collection": "tenant",
+      "via": "component_library",
+      "collectionName": "component_library_tenant",
+      "dominant": true
+    },
+    "materials": {
+      "via": "component_library",
+      "collection": "materials"
+    }
+  }
+}
