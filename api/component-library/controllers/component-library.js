@@ -9,26 +9,29 @@
 * A PARTICULAR PURPOSE. SEE THE APPLICABLE LICENSES FOR MORE DETAILS.
 *
 */
-const _ = require('lodash');
-const { sanitizeEntity } = require('strapi-utils');
-const { ERROR_TYPE, UNIT_TYPE, AUTH_TYPE } = require('../../../config/constants');
-const { throwErrors, getPublicSuperAdmin, isTenantAdmin } = require('../../../config/toolkits');
 
-const { isTruthy,
-        findAllMaterial,
-        handlePublicScope
-} = require('../../../config/material');
+const { sanitizeEntity } = require("strapi-utils");
+const { throwErrors } = require('../../../config/toolkits');
+const { ERROR_TYPE } = require('../../../config/constants');
 
 module.exports = {
   async delete(ctx) {
     const { id } = ctx.params;
-    const entity = await strapi.services['component-library'].delete({ id });
     try{
-      await strapi.services['user-components'].delete({ library: id });
-    } catch (error) {
-      strapi.log.error('user-component delete failed', error);
-      return res;
+      const res = await strapi.services['component-library'].delete({ id });
+      try{
+        await strapi.services['user-components'].delete({ library: id });
+      } catch (error) {
+        strapi.log.error('user-component delete failed', error);
+        throwErrors('user-component delete failed.', ERROR_TYPE.badRequest);
+      }
+      return sanitizeEntity(res, {model: strapi.models['component-library']});
+
+    }catch(error) {
+      strapi.log.error('component-library delete failed', error);
+      throwErrors('component-library delete failed.', ERROR_TYPE.badRequest);
     }
-    return res;
+    
+    return sanitizeEntity(res, {model: strapi.models['component-library']});;
   }
 };
