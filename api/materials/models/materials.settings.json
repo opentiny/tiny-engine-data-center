@@ -53,7 +53,9 @@
       "type": "json"
     },
     "user_components": {
-      "type": "string"
+      "via": "materials",
+      "collection": "user-components",
+      "dominant": true
     },
     "latest": {
       "model": "material-histories"

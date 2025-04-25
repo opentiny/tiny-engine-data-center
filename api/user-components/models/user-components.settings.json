@@ -114,6 +114,10 @@
     },
     "library": {
       "type": "integer"
+    },
+    "materials": {
+      "via": "user_components",
+      "collection": "materials"
     }
   }
 }
